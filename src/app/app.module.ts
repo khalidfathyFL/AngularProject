@@ -8,6 +8,7 @@ import { FooterComponent } from './Lecture1/footer/footer.component';
 import { ProductsComponent } from './Lecture1/products/products.component';
 import { ServerComponent } from './lecture2/server/server.component';
 import { FormsModule } from '@angular/forms';
+import { Task1Component } from './task1/task1/task1.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    ServerComponent
+    ServerComponent,
+    Task1Component
   ],
   imports: [
     BrowserModule,

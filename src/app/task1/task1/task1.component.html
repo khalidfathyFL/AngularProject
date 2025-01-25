@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- Input field bound to userName with two-way binding -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="userName"
+      placeholder="Please enter username"
+    />
+    
+    <!-- Display the current value of userName -->
+    <p>{{ userName }}</p>
+    
+    <!-- Button enabled/disabled based on isButtonDisabled getter -->
+    <button
+      [disabled]="isButtonDisabled"
+      class="btn btn-primary"
+      (click)="resetUserName()"
+    >
+      Reset
+    </button>
+  </div>
+  
