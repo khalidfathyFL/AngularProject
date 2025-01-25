@@ -1,0 +1,21 @@
+<div class="container">
+<button class="btn btn-primary" (click)="onButtonClick()">Display Details</button>
+
+
+@if (isDisplayed) {
+    
+    <p> 'secret password = Tuna'</p>
+}
+
+@for ( item of logs;let i = $index; track $index) {
+    <p 
+      [ngClass]="{ 'text-white': i >= 4 }" 
+      [ngStyle]="i >= 4 ? { 'background-color': 'blue' } : {}">
+      {{ item }}
+    </p>
+}
+
+
+
+  
+</div>

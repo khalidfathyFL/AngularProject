@@ -8,7 +8,8 @@ import { FooterComponent } from './Lecture1/footer/footer.component';
 import { ProductsComponent } from './Lecture1/products/products.component';
 import { ServerComponent } from './lecture2/server/server.component';
 import { FormsModule } from '@angular/forms';
-import { Task1Component } from './task1/task1/task1.component';
+import { Task1Component } from './Tasks/task1/task1.component';
+import { Task2Component } from './Tasks/task2/task2.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Task1Component } from './task1/task1/task1.component';
     FooterComponent,
     ProductsComponent,
     ServerComponent,
-    Task1Component
+    Task1Component,
+    Task2Component
   ],
   imports: [
     BrowserModule,
