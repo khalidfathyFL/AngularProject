@@ -1,0 +1,54 @@
+<div class="container mt-3">
+    <!-- Button Section -->
+    <!-- Event Binding -->
+    <button 
+        type="button"
+        class="btn btn-primary" 
+        [disabled]="!addServerIsAllowed"
+        (click)="changeServerStatus()"
+        >
+        Add Server
+    </button>
+</div>
+
+<div class="container mt-3">
+  <!-- Server Information Section -->
+  <!-- String Interpolation -->
+  <h1>Server id is {{serverId}}</h1>
+  <p>Server status is {{getServerStatus()}}</p>
+  
+  <h1>{{serverStatusMessage}}</h1>
+
+  <!-- Server Status Section -->
+  <!-- Structural Directive -->
+
+
+  <!-- <div *ngIf="isServerCreated ;else serverClosed">
+  </div>
+  <ng-template #serverClosed>
+    <div>
+      Server is closed
+    </div>
+  </ng-template> -->
+
+  @if (isServerCreated) {
+    <div [ngStyle]="serverStyles">
+        Server is up and running
+    </div>
+  }
+  @else {
+    <div [ngClass]="serverClasses">
+        Server is closed
+    </div>
+  }
+
+  <!-- Input Section -->
+  <!-- Two-Way Binding -->
+  <input 
+    type="text" 
+    class="form-control" [(ngModel)]="serverTest"
+    title="Server Test Input"
+    placeholder="Enter server test"
+    />
+    {{serverTest}}
+</div>
